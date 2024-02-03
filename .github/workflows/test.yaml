@@ -1,6 +1,6 @@
 name: Test
 
-on: [push]
+on: workflow_dispatch
 
 jobs:
   test:
@@ -42,3 +42,5 @@ jobs:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-report
+      - name: Check GitHub Token Permissions
+        run: gh auth check -t ${{ secrets.GITHUB_TOKEN }}
