@@ -5,7 +5,7 @@ import io.qameta.allure.*;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import pages.WebStepsDataPage;
+import pages.WebSteps;
 
 
 public class AllureReportsWithWebStepsTest {
@@ -20,7 +20,7 @@ public class AllureReportsWithWebStepsTest {
     @DisplayName("Проверка названия Issue c номером 85")
     public void allureReportsHomeworkWithWebSteps() {
         SelenideLogger.addListener("allure", new AllureSelenide());
-        WebStepsDataPage steps = new WebStepsDataPage();
+        WebSteps steps = new WebSteps();
 
         steps.openMainPage();
         steps.takeScreenshot();

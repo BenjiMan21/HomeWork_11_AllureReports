@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selectors.byLinkText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class WebStepsDataPage {
+public class WebSteps {
 
     @Step("Открываем главную страницу Github")
     public void openMainPage() {

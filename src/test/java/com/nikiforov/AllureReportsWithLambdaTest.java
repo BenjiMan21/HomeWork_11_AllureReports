@@ -9,8 +9,8 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byLinkText;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.logevents.SelenideLogger.step;
 import static io.qameta.allure.Allure.attachment;
+import static io.qameta.allure.Allure.step;
 
 
 public class AllureReportsWithLambdaTest {
@@ -23,7 +23,7 @@ public class AllureReportsWithLambdaTest {
     @Severity(SeverityLevel.BLOCKER)
     @Link(value = "Github", url = "https://github.com")
     @DisplayName("Проверка названия Issue c номером 85")
-    void allureReportsHomeworkWithLambda () {
+    void allureReportsHomeworkWithLambda() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Открываем главную страницу Github", ()-> {

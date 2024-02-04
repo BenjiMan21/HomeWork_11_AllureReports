@@ -19,7 +19,7 @@ public class AllureReportsWithListenerTest {
     @Severity(SeverityLevel.BLOCKER)
     @Link(value = "Github", url = "https://github.com")
     @DisplayName("Проверка названия Issue c номером 85")
-    void allureReportsHomeworkWithListener () {
+    void allureReportsHomeworkWithListener() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
         open("https://github.com");
